@@ -1,5 +1,6 @@
 const url = 'https://type.fit/api/quotes';
 const quotes = document.querySelector('.quotes');
+const clearQuote = document.querySelector('.clear');
 
 const getQuotes = async function () {
   const response = await fetch(url);
@@ -31,7 +32,7 @@ function displayQuotes(data, value) {
             <p>
             ${quote.text}
           </p>
-          <p class="author">--${quote.author}</p>
+          <p class="author">--${!quote.author ? 'Unknown' : quote.author}</p>
           </div>
           <hr>
 
@@ -58,3 +59,10 @@ form.addEventListener('submit', (e) => {
   loadQuotes(value);
 });
 // loadQuotes();
+
+clearQuote.addEventListener('click', () => {
+  if (quotes.children.length > 0) {
+    quotes.innerHTML = '';
+    num.value = '';
+  }
+});
