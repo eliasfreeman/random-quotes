@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="app.js" type="module" defer></script>
+    <title>Simple tailwind starter</title>
+  </head>
+  <body class="p-6 min-h-screen">
+    <!-- Container -->
+    <div class="w-90 max-w-2xl">
+      <h1 class="text-4xl font-semibold capitalize mb-4">Quotes Generator</h1>
+      <form action="" class="mb-8 form">
+        <h2>Number of Quotes</h2>
+        <input type="number" id="number" class="w-44 border p-2 mt-2 number" />
+        <button
+          class="block bg-white border border-gray-200 uppercase py-2 px-5 mt-3 btn">
+          get quotes
+        </button>
+      </form>
+      <p class="text-red-500 text-sm hidden error">
+        Please put in a value between 1 and 10
+      </p>
+      <hr />
+      <div class="quotes my-4" id="quotes"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+hr {
+  @apply mb-4;
+}
+
+.quote {
+  @apply mb-4;
+}
+
+.author {
+  @apply text-right font-bold italic mr-5;
+}
